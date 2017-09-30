@@ -1,0 +1,27 @@
+CSci4611 - Assignment 4
+(fangx174 / 5094239)
+
+	In this assignment, the character is draw by the character and bone
+class drawing function. The character::draw() is simply apply the current 
+transformation matrix to the coordinate system and using a for loop to
+draw the bones attached to the root node. Drawing of the other parts of 
+the body is handled by the recursive function calls within bone::draw().
+	bone::draw() is applying and popping transformation matrix to draw the
+current bone in right position (the construction of rotation matrix is
+implemented using method b in the handout), and the starting points is then
+moved to the endpoints of current bone, and calling itself recursively on
+the children of this bone.
+
+	The spline line is implemented using the given formula in class slide, 
+with problem specific scaling. Basic idea is to find the two control 
+points which current time frame is in between, and evaluate the position
+and derivatives.
+
+	Finally, to make the person walk on the spline line, the root node is
+translated to the position returned by spline::getValue(). Also to make him
+facing right, the z_axis of coordinate system is rotated to meet the
+derivative value returned by spline::getDerivative(). The velocity is
+proportional to value of (dt*curVelocity*0.23/baseVelocity), where curVelocity
+is length of spline::getDerivative() and baseVelocity is the length of original
+velocity vector.
+

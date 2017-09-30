@@ -1,0 +1,8 @@
+CSci4611 Assignment3
+	fangx174 (5094239)
+
+	In this assignment, the magnitude of the earthquake is represented by
+the various of radius of data points. With greater magnitude, the radius
+will be comparatively larger. Also, the portion of red color in the color of drawing the little sphere is proportional to the magnitude(converted to range of 0-1).
+
+	The smooth transaction is implemented by updating the targetSpherical value when the user press s to 0 or 1. The setSpherical() function will pass the isSpherical value to the earth object. In the earth class, values in the vertices and normal buffer will be replace by the new value calculated base on the isSpherical value, sent to the CPU for further rendering. The increase rate of form transformation is 0.25 per frame. 

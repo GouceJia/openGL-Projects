@@ -1,0 +1,10 @@
+CSci4611 - Assignment 5
+(fangx174 / 5094239)
+
+Description:
+       For the specular components implementation, the half-way vector is used instead of reflection vector. The Blinn-Phong shading effect of each pixels is calculated using equation:
+      color = ka Ia + kd Id (n · ℓ) + ks Is (n · h)^s
+the dot products of diffuse factor and specular factor in equation is replaced with a texture mapping to given textures.
+
+Above and Beyond: 
+	Pressing “K” will switch the displayed object.

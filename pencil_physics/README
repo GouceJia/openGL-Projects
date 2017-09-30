@@ -1,0 +1,12 @@
+CSci4611 - Assignment 6
+(fangx174 / 5094239)
+
+Description:
+    The linking of box2D objects and openGL is enabled by creating of same
+shapes in both environment. The box2D will handle the physics simulations
+and the graph of which is updated by redraw the shape in the returned position.
+
+    The definition of box2D objects are handled in shape.hpp file, and the
+position, angle value and pointer to box2D circle / box object is returned
+to be used in main program, in order to update the frame. The rotation of object
+is handled in draw.cpp by passing additional angle values into it.
